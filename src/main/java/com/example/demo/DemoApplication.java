@@ -10,15 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @SpringBootApplication
 @RestController
-public final class DemoApplication {
-
-    private DemoApplication() {
-        // Private constructor to prevent instantiation
-    }
+public class DemoApplication {
 
     /**
      * Main entry point of the application.
-     *
+     * 
      * @param args command line arguments
      */
     public static void main(final String[] args) {
@@ -27,11 +23,11 @@ public final class DemoApplication {
 
     /**
      * Root endpoint returning a greeting message.
-     *
+     * 
      * @return greeting string
      */
     @GetMapping("/")
-    public String hello() {
+    public final String hello() {
         return "Hello from Secure CI/CD Pipeline!";
     }
 
