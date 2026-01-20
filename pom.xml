@@ -16,8 +16,8 @@
   <properties>
     <java.version>17</java.version>
     <!-- Overriding versions to resolve security vulnerabilities reported by Trivy -->
-    <tomcat.version>10.1.35</tomcat.version>
-    <spring-framework.version>6.2.2</spring-framework.version>
+    <tomcat.version>10.1.45</tomcat.version>
+    <spring-framework.version>6.2.11</spring-framework.version>
   </properties>
   <dependencies>
     <dependency>
