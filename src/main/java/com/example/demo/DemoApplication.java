@@ -14,7 +14,7 @@ public class DemoApplication {
 
     /**
      * Main entry point of the application.
-     * 
+     *
      * @param args command line arguments
      */
     public static void main(final String[] args) {
@@ -23,7 +23,7 @@ public class DemoApplication {
 
     /**
      * Root endpoint returning a greeting message.
-     * 
+     *
      * @return greeting string
      */
     @GetMapping("/")
