@@ -1,0 +1,29 @@
+name: Deployment (CD) Pipeline
+
+on:
+  workflow_run:
+    workflows: ["Advanced CI Pipeline"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  deploy-to-k8s:
+    name: Deploy to Kubernetes
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Simulate K8s Deployment
+        run: |
+          echo "Connecting to Kubernetes Cluster..."
+          echo "Applying Manifests..."
+          # In a real scenario: kubectl apply -f k8s/
+          echo "Deployment successful!"
+
+      - name: Dummy DAST Scan
+        run: |
+          echo "Running Dummy DAST on deployed endpoint..."
+          echo "Scan completed. No major issues found."
