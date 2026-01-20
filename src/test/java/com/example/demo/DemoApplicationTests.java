@@ -12,23 +12,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class DemoApplicationTests {
 
-	@Autowired
-	private TestRestTemplate restTemplate;
+    @Autowired
+    private TestRestTemplate restTemplate;
 
-	/**
-	 * Verifies that the context loads successfully.
-	 */
-	@Test
-	void contextLoads() {
-	}
+    /**
+     * Verifies that the context loads successfully.
+     */
+    @Test
+    void contextLoads() {
+    }
 
-	/**
-	 * Verifies that the hello endpoint returns the expected greeting.
-	 */
-	@Test
-	void helloEndpointReturnsGreeting() {
-		String body = this.restTemplate.getForObject("/", String.class);
-		assertThat(body).contains("Hello from Secure CI/CD Pipeline!");
-	}
+    /**
+     * Verifies that the hello endpoint returns the expected greeting.
+     */
+    @Test
+    void helloEndpointReturnsGreeting() {
+        String body = this.restTemplate.getForObject("/", String.class);
+        assertThat(body).contains("Hello from Secure CI/CD Pipeline!");
+    }
 
 }
